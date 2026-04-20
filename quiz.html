@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <!-- START SCREEN -->
+    <div class="screen" id="start-screen">
+        <div class="card start-card">
+            <div class="quiz-icon">&#129504;</div>
+            <h1 class="quiz-title">Quiz App</h1>
+            <p class="quiz-subtitle">Test your knowledge with 10 questions</p>
+            <div class="info-row">
+                <div class="info-item">
+                    <span class="info-icon">&#128337;</span>
+                    <span>10 Questions</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">&#9889;</span>
+                    <span>30 sec / Q</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">&#127942;</span>
+                    <span>10 Points</span>
+                </div>
+            </div>
+            <button class="btn btn-primary" id="start-btn">Start Quiz</button>
+        </div>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div class="screen hidden" id="quiz-screen">
+        <div class="quiz-container">
+
+            <!-- Top Bar -->
+            <div class="quiz-topbar">
+                <div class="progress-info">
+                    <span class="question-counter">Question <span id="current-q">1</span> of <span id="total-q">10</span></span>
+                </div>
+                <div class="score-badge">
+                    Score: <span id="score">0</span>
+                </div>
+                <div class="timer-wrap">
+                    <div class="timer-circle">
+                        <span id="timer">30</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar-wrap">
+                <div class="progress-bar" id="progress-bar" style="width: 10%"></div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="card question-card">
+                <div class="question-number-tag">Q<span id="q-num">1</span></div>
+                <h2 class="question-text" id="question-text">
+                    What is the capital of France?
+                </h2>
+
+                <!-- Options -->
+                <div class="options-grid" id="options-container">
+                    <button class="option-btn" data-index="0">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">London</span>
+                    </button>
+                    <button class="option-btn" data-index="1">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">Berlin</span>
+                    </button>
+                    <button class="option-btn correct" data-index="2">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">Paris</span>
+                    </button>
+                    <button class="option-btn wrong" data-index="3">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">Madrid</span>
+                    </button>
+                </div>
+
+                <!-- Feedback -->
+                <div class="feedback correct-feedback" id="feedback">
+                    <span class="feedback-icon">&#10004;</span>
+                    <span id="feedback-text">Correct! Well done!</span>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="quiz-nav">
+                <button class="btn btn-outline" id="prev-btn">&#8592; Previous</button>
+                <button class="btn btn-primary" id="next-btn">Next &#8594;</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- RESULT SCREEN -->
+    <div class="screen hidden" id="result-screen">
+        <div class="card result-card">
+
+            <div class="result-icon" id="result-icon">&#127942;</div>
+            <h2 class="result-title" id="result-title">Excellent!</h2>
+            <p class="result-subtitle" id="result-subtitle">You really know your stuff!</p>
+
+            <div class="score-display">
+                <div class="score-circle">
+                    <span class="score-number" id="final-score">8</span>
+                    <span class="score-total">/ 10</span>
+                </div>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-box correct-stat">
+                    <span class="stat-num" id="correct-count">8</span>
+                    <span class="stat-label">Correct</span>
+                </div>
+                <div class="stat-box wrong-stat">
+                    <span class="stat-num" id="wrong-count">2</span>
+                    <span class="stat-label">Wrong</span>
+                </div>
+                <div class="stat-box skip-stat">
+                    <span class="stat-num" id="skip-count">0</span>
+                    <span class="stat-label">Skipped</span>
+                </div>
+            </div>
+
+            <div class="result-actions">
+                <button class="btn btn-primary" id="retry-btn">&#128257; Play Again</button>
+                <button class="btn btn-outline" id="review-btn">&#128203; Review Answers</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
