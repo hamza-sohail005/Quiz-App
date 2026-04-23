@@ -28,7 +28,7 @@
                     <span>10 Points</span>
                 </div>
             </div>
-            <button class="btn btn-primary" id="start-btn">Start Quiz</button>
+            <button class="btn btn-primary" id="start-btn" onclick="render_questions()">Start Quiz</button>
         </div>
     </div>
 
@@ -57,43 +57,18 @@
             </div>
 
             <!-- Question Card -->
-            <div class="card question-card">
-                <div class="question-number-tag">Q<span id="q-num">1</span></div>
-                <h2 class="question-text" id="question-text">
-                    What is the capital of France?
-                </h2>
+            <div class="card question-card" id="question-card">
+                
 
                 <!-- Options -->
-                <div class="options-grid" id="options-container">
-                    <button class="option-btn" data-index="0">
-                        <span class="option-letter">A</span>
-                        <span class="option-text">London</span>
-                    </button>
-                    <button class="option-btn" data-index="1">
-                        <span class="option-letter">B</span>
-                        <span class="option-text">Berlin</span>
-                    </button>
-                    <button class="option-btn correct" data-index="2">
-                        <span class="option-letter">C</span>
-                        <span class="option-text">Paris</span>
-                    </button>
-                    <button class="option-btn wrong" data-index="3">
-                        <span class="option-letter">D</span>
-                        <span class="option-text">Madrid</span>
-                    </button>
-                </div>
 
-                <!-- Feedback -->
-                <div class="feedback correct-feedback" id="feedback">
-                    <span class="feedback-icon">&#10004;</span>
-                    <span id="feedback-text">Correct! Well done!</span>
-                </div>
+                
             </div>
 
             <!-- Navigation -->
             <div class="quiz-nav">
                 <button class="btn btn-outline" id="prev-btn">&#8592; Previous</button>
-                <button class="btn btn-primary" id="next-btn">Next &#8594;</button>
+                <button class="btn btn-primary" id="next-btn" onclick="render_questions();">Next &#8594;</button>
             </div>
 
         </div>
