@@ -374,6 +374,7 @@ body {
     border: 1px solid #bbf7d0;
 }
 
+
 .wrong-feedback {
     background: var(--danger-light);
     color: #b91c1c;
@@ -513,6 +514,119 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+/* ===================== REVIEW SCREEN ===================== */
+.review-card {
+    max-width: 640px;
+    padding: 32px;
+}
+
+.review-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.review-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text);
+}
+
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    width: auto;
+}
+
+.review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.review-item {
+    border-radius: var(--radius-sm);
+    padding: 18px 20px;
+    border-left: 4px solid var(--border);
+    background: #f8f9ff;
+}
+
+.review-item.review-correct  { border-left-color: var(--success); background: var(--success-light); }
+.review-item.review-wrong    { border-left-color: var(--danger);  background: var(--danger-light); }
+.review-item.review-skipped  { border-left-color: var(--warning); background: var(--warning-light); }
+
+.review-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.review-q-num {
+    font-weight: 800;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.review-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 50px;
+}
+
+.review-badge-correct { background: #dcfce7; color: #15803d; }
+.review-badge-wrong   { background: #fee2e2; color: #b91c1c; }
+.review-badge-skipped { background: #fef3c7; color: #92400e; }
+
+.review-question {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.review-answers {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.review-answer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.review-your-correct  { background: rgba(34,197,94,0.15); }
+.review-your-wrong    { background: rgba(239,68,68,0.12); }
+.review-your-skipped  { background: rgba(245,158,11,0.12); }
+.review-correct-ans   { background: rgba(34,197,94,0.15); }
+
+.review-label {
+    font-weight: 700;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    min-width: 110px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.review-value {
+    font-weight: 600;
+    color: var(--text);
 }
 
 /* ===================== RESPONSIVE ===================== */

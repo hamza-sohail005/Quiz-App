@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
                 </div>
                 <div class="info-item">
                     <span class="info-icon">&#9889;</span>
-                    <span>30 sec / Q</span>
+                    <span>15 sec / Q</span>
                 </div>
                 <div class="info-item">
                     <span class="info-icon">&#127942;</span>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="timer-wrap">
                     <div class="timer-circle">
-                        <span id="timer">30</span>
+                        <span id="timer">15</span>
                     </div>
                 </div>
             </div>
@@ -63,12 +63,6 @@
                 <!-- Options -->
 
                 
-            </div>
-
-            <!-- Navigation -->
-            <div class="quiz-nav">
-                <button class="btn btn-outline" id="prev-btn">&#8592; Previous</button>
-                <button class="btn btn-primary" id="next-btn" onclick="render_questions();">Next &#8594;</button>
             </div>
 
         </div>
@@ -98,20 +92,29 @@
                     <span class="stat-num" id="wrong-count">2</span>
                     <span class="stat-label">Wrong</span>
                 </div>
-                <div class="stat-box skip-stat">
-                    <span class="stat-num" id="skip-count">0</span>
-                    <span class="stat-label">Skipped</span>
-                </div>
             </div>
 
             <div class="result-actions">
-                <button class="btn btn-primary" id="retry-btn">&#128257; Play Again</button>
-                <button class="btn btn-outline" id="review-btn">&#128203; Review Answers</button>
+                <button class="btn btn-primary" id="retry-btn" onclick="playAgain()">&#128257; Play Again</button>
+                <button class="btn btn-outline" id="review-btn" onclick="showReview()">&#128203; Review Answers</button>
             </div>
 
         </div>
     </div>
 
+    <!-- REVIEW SCREEN -->
+    <div class="screen hidden" id="review-screen">
+        <div class="quiz-container">
+            <div class="card review-card">
+                <div class="review-topbar">
+                    <h2 class="review-title">&#128203; Answer Review</h2>
+                    <button class="btn btn-primary btn-sm" onclick="playAgain()">&#128257; Play Again</button>
+                </div>
+                <div id="review-list" class="review-list"></div>
+            </div>
+        </div>
+    </div>
+
     <script src="quiz.js"></script>
 </body>
-</html>
+</html> -->
